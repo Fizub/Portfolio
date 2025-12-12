@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Zimovjan – Web Projekt</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+        }
+        h1 {
+            background: #0a71d9;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .note {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #d0d0d0;
+        }
+        #czBtn, #enBtn {
+            padding: 8px 12px;
+            margin-left: 6px;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #0a71d9;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        #czBtn:hover, #enBtn:hover {
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="display:flex; justify-content:space-between; align-items:center;">
+    Daniel Zimovjan - Portfolio
+    <div>
+        <button id="czBtn">CZECH</button>
+        <button id="enBtn">ENGLISH</button>
+    </div>
+</h1>
+
+<div class="content">
+    <div class="note">
+        <h2>Portfolio</h2>
+        <p><strong>O mně:</strong> Mladý vývojář zaměřený na C++, reverse engineering, ImGui, engine systémy a tvorbu vlastních nástrojů. Pracuji samostatně, mám zkušenost s kompletní implementací ESP, trigger systémů, skeletal transformací a herních overlayů v C++.</p>
+
+        <h3>Technické dovednosti</h3>
+        <ul>
+            <li>Pokročilé C++ (OOP, pointery, memory struktury, engine API)</li>
+            <li>Lua – 3 roky zkušeností (scripting, game logic)</li>
+            <li>Reverse engineering (analýza enginu, bone structures, trace systémy)</li>
+            <li>ImGui overlay + DX11 hook</li>
+            <li>Skeletal systems, Bone matrices, ViewMatrix, WorldToScreen výpočty</li>
+            <li>Práce s herními entitami (Pawn, Controller, GameSceneNode…)</li>
+            <li>Roblox UGC pipeline – tvorba, upload, monetizace assetů</li>
+        </ul>
+
+        <h3>Hlavní projekty</h3>
+        <h4>C++ Game Utility Framework (ESP + Trigger System)</h4>
+        <p>Komplexní systém zahrnující:</p>
+        <ul>
+            <li>RayCast + vlastní trace filtry</li>
+            <li>ESP (jména, vzdálenosti, health bary, bone pozice)</li>
+            <li>Triggerbot s kontrolou týmů</li>
+            <li>DX11 ImGui overlay</li>
+            <li>Práci s engine pointery a rozsáhlými strukturami</li>
+        </ul>
+
+        <h4>Roblox UGC Asset Development</h4>
+        <ul>
+            <li>Vytvořeno a publikováno několik UGC assetů</li>
+            <li>Vyděláno 10 000 Kč ve věku 11 let</li>
+            <li>Pochopení celého procesu – design, optimalizace, upload</li>
+        </ul>
+
+        <h3>Úspěchy</h3>
+        <ul>
+            <li>Pokročilé projekty v C++ ve věku 13 let</li>
+            <li>Samostatná práce s enginem, ImGui, reverse engineeringem</li>
+            <li>Brzká monetizace digitálních projektů</li>
+        </ul>
+
+        <h3>Kontakt</h3>
+        <p>Telefon: +420 731 855 380<br>Lokalita: Praha 9</p>
+    </div>
+</div>
+
+<script>
+const czBtn = document.getElementById('czBtn');
+const enBtn = document.getElementById('enBtn');
+
+function setLanguage(lang) {
+    const note = document.querySelector('.note');
+
+    if (lang === 'cz') {
+        note.innerHTML = `
+        <h2>Portfolio</h2>
+        <p><strong>O mně:</strong> Mladý vývojář zaměřený na C++, reverse engineering, ImGui, engine systémy a tvorbu vlastních nástrojů. Pracuji samostatně, mám zkušenost s kompletní implementací ESP, trigger systémů, skeletal transformací a herních overlayů v C++.</p>
+
+        <h3>Technické dovednosti</h3>
+        <ul>
+            <li>Pokročilé C++ (OOP, pointery, memory struktury, engine API)</li>
+            <li>Lua – 3 roky zkušeností (scripting, game logic)</li>
+            <li>Reverse engineering (analýza enginu, bone structures, trace systémy)</li>
+            <li>ImGui overlay + DX11 hook</li>
+            <li>Skeletal systems, Bone matrices, ViewMatrix, WorldToScreen výpočty</li>
+            <li>Práce s herními entitami (Pawn, Controller, GameSceneNode…)</li>
+            <li>Roblox UGC pipeline – tvorba, upload, monetizace assetů</li>
+        </ul>
+
+        <h3>Hlavní projekty</h3>
+        <h4>C++ Game Utility Framework (ESP + Trigger System)</h4>
+        <p>Komplexní systém zahrnující:</p>
+        <ul>
+            <li>RayCast + vlastní trace filtry</li>
+            <li>ESP (jména, vzdálenosti, health bary, bone pozice)</li>
+            <li>Triggerbot s kontrolou týmů</li>
+            <li>DX11 ImGui overlay</li>
+            <li>Práci s engine pointery a rozsáhlými strukturami</li>
+        </ul>
+
+        <h4>Roblox UGC Asset Development</h4>
+        <ul>
+            <li>Vytvořeno a publikováno několik UGC assetů</li>
+            <li>Vyděláno 10 000 Kč ve věku 11 let</li>
+            <li>Pochopení celého procesu – design, optimalizace, upload</li>
+        </ul>
+
+        <h3>Úspěchy</h3>
+        <ul>
+            <li>Pokročilé projekty v C++ ve věku 13 let</li>
+            <li>Samostatná práce s enginem, ImGui, reverse engineeringem</li>
+            <li>Brzká monetizace digitálních projektů</li>
+        </ul>
+
+        <h3>Kontakt</h3>
+        <p>Telefon: +420 731 855 380<br>Lokalita: Praha 9</p>`;
+    }
+
+    if (lang === 'en') {
+        note.innerHTML = `
+        <h2>Portfolio</h2>
+        <p><strong>About me:</strong> Young developer focused on C++, reverse engineering, ImGui, engine systems and building custom internal tools. I work independently and have experience implementing full ESP systems, trigger logic, skeletal transforms and engine overlays in C++.</p>
+
+        <h3>Technical Skills</h3>
+        <ul>
+            <li>Advanced C++ (OOP, pointers, memory structures, engine API)</li>
+            <li>Lua – 3 years of experience (scripting, game logic)</li>
+            <li>Reverse engineering (engine analysis, bone structures, trace systems)</li>
+            <li>ImGui overlay + DX11 hook</li>
+            <li>Skeletal systems, bone matrices, ViewMatrix, WorldToScreen math</li>
+            <li>Working with engine entities (Pawn, Controller, GameSceneNode…)</li>
+            <li>Roblox UGC pipeline – creation, upload, monetization</li>
+        </ul>
+
+        <h3>Main Projects</h3>
+        <h4>C++ Game Utility Framework (ESP + Trigger System)</h4>
+        <p>Complex system featuring:</p>
+        <ul>
+            <li>RayCast + custom trace filters</li>
+            <li>ESP (names, distance, health bars, bone positions)</li>
+            <li>Triggerbot with team checking</li>
+            <li>DX11 ImGui overlay</li>
+            <li>Work with engine pointers and large structures</li>
+        </ul>
+
+        <h4>Roblox UGC Asset Development</h4>
+        <ul>
+            <li>Created and published multiple UGC assets</li>
+            <li>Earned 10,000 CZK at age 11</li>
+            <li>Mastered the process – design, optimization, upload</li>
+        </ul>
+
+        <h3>Achievements</h3>
+        <ul>
+            <li>Advanced C++ projects at age 13</li>
+            <li>Independent work with engine internals and reverse engineering</li>
+            <li>Early monetization of digital projects</li>
+        </ul>
+
+        <h3>Contact</h3>
+        <p>Phone: +420 731 855 380<br>Location: Prague 9</p>`;
+    }
+}
+
+czBtn.onclick = () => setLanguage('cz');
+enBtn.onclick = () => setLanguage('en');
+</script>
+
+</body>
+</html>
